@@ -62,7 +62,7 @@ i learned about how to implement drag and drop still not fully understanding it 
 ## Author
 
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/mahmoudnasr71)
+- Frontend Mentor - [@mahmoudnasr71](https://www.frontendmentor.io/profile/mahmoudnasr71)
 
 
 
