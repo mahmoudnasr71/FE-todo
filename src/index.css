@@ -243,6 +243,10 @@ button {
     margin: 50px auto;
   }
 
+  .logo {
+    font-size: 40px;
+  }
+
   main {
     display: flex;
     flex-direction: column;
