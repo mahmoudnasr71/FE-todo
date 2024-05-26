@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FE-todo-app/static/css/main.84576f6f.css",
+    "main.js": "/FE-todo-app/static/js/main.371e3dcd.js",
+    "static/media/bg-desktop-light.jpg": "/FE-todo-app/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/FE-todo-app/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/FE-todo-app/index.html",
+    "main.84576f6f.css.map": "/FE-todo-app/static/css/main.84576f6f.css.map",
+    "main.371e3dcd.js.map": "/FE-todo-app/static/js/main.371e3dcd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84576f6f.css",
+    "static/js/main.371e3dcd.js"
+  ]
+}
