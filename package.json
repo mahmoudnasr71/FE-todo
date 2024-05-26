@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
-  "homepage": "https://mahmoudnasr71.github.io/FE-todo-app",
+  "homepage": "https://mahmoudnasr71.github.io/FE-todo",
   "private": true,
   "dependencies": {
     "@dnd-kit/core": "^6.1.0",
