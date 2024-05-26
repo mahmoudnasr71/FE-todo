@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --bg-color: hsl(235, 0%, 98%);
+  --text-color: hsl(235, 21%, 11%);
+  --input-bg-color: hsl(0, 0%, 100%);
+  --input-text-color: hsl(235, 21%, 11%);
+  --task-bg-color: hsl(0, 0%, 100%);
+  --task-text-color: hsl(235, 21%, 11%);
+  --check-color: hsl(236, 33%, 92%);
+  --text: hsl(235, 9%, 61%);
+  --checked-bg-color: linear-gradient(to right, #55ddff, #c058f3);
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: hsl(235, 21%, 11%);
+  --text-color: hsl(0, 0%, 98%);
+  --input-bg-color: hsl(235, 24%, 19%);
+  --input-text-color: hsl(0, 0%, 98%);
+  --task-bg-color: hsl(235, 24%, 19%);
+  --task-text-color: hsl(235, 39%, 85%);
+  --check-color: hsl(235, 21%, 11%);
+  --text: hsl(235, 16%, 43%);
+  --checked-bg-color: linear-gradient(to right, #55ddff, #c058f3);
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+}
+
+.check {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--check-color);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked {
+  background: var(--checked-bg-color);
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  background-image: url("./images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+[data-theme="dark"] .app {
+  background-image: url("./images/bg-mobile-dark.jpg");
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.logo {
+  color: hsl(0, 0%, 98%) !important;
+}
+
+.input-form input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 24px;
+  letter-spacing: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.input-form {
+  display: flex;
+  position: relative;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 16px 10px 16px 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
+}
+
+.task-list {
+  list-style: none;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  background-color: var(--task-bg-color);
+  font-size: 13px;
+}
+
+.task {
+  padding: 16px 10px 16px 40px;
+  background-color: var(--task-bg-color);
+  color: var(--task-text-color);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
+
+.task-divider {
+  margin: 0 10px;
+  border: none;
+  height: 1px;
+  background-color: var(--check-color);
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--task-bg-color);
+  border-radius: 5px;
+  font-size: 12px;
+  letter-spacing: -0.17px;
+  color: var(--text);
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--text);
+}
+
+.filter-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--task-bg-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  font-size: 12px;
+  width: 327px;
+  height: 48px;
+}
+
+.filter-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.filter-button.active {
+  color: var(--text-color);
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  visibility: hidden;
+  width: 18px;
+  height: 18px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drag {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.filter-footer .active {
+  color: #3a7cfd;
+}
+
+@media screen and (min-width: 700px) {
+  .app {
+    max-width: 100%;
+    background-image: url("./images/bg-desktop-light.jpg");
+    width: 100%;
+    height: 300px;
+  }
+
+  [data-theme="dark"] .app {
+    background-image: url("./images/bg-desktop-dark.jpg");
+  }
+
+  .header {
+    max-width: 700px;
+    margin: 50px auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-form {
+    width: 540px;
+  }
+
+  .task-list {
+    width: 540px;
+    font-size: 18px;
+  }
+
+  .input-form input {
+    padding: 20px 15px 20px 50px;
+  }
+
+  .task {
+    padding: 20px 15px 20px 50px;
+  }
+
+  .task-footer {
+    padding: 15px 25px;
+  }
+
+  .task-footer span {
+    font-size: 14px;
+  }
+
+  .filter-footer {
+    padding: 15px 25px;
+    width: 540px;
+  }
+
+  .drag {
+    font-size: 16px;
+  }
+
+  .filter-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    box-shadow: none;
+    background: none;
+    font-size: 12px;
+  }
+
+  .filter-footer button:hover {
+    color: var(--text-color);
+  }
+
+  .task .check:hover {
+    border: 1px solid #c058f3 !important;
+  }
+
+  .filter-footer button {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+  }
+
+  .input-form input {
+    caret-color: #3a7cfd;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+  }
+
+  .input-form input::placeholder {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    margin: auto;
+  }
+
+  .clear-button {
+    font-size: 14px;
+  }
+
+  .clear-button:hover {
+    color: var(--text-color);
+  }
+
+  .task:hover .delete-button {
+    visibility: visible;
+  }
+}
