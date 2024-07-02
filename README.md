@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/mahmoudnasr71/FE-Todo-app)
-- Live Site URL: [GithubPages](https://your-live-site-url.com)
+- Live Site URL: [GithubPages](https://mahmoudnasr71.github.io/FE-todo/)
 
 ## My process
 
